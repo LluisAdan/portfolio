@@ -18,12 +18,23 @@ const projectSchema = new Schema(
     url: {
       type: String
     },
+    git: {
+      type: String
+    },
     skills: {
       type: [String]
     }
   },
   {
-    timestamps: true
+    timestamps: true,
+    toJSON: {
+      transform: (doc, ret) => {
+        ret.id = ret._id,
+        delete ret._id;
+        delete ret.__v;
+        return ret;
+      }
+    }
   }
 );
 
