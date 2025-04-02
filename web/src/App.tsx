@@ -10,16 +10,14 @@ function App() {
       <Navbar />
 
       <main className="pt-20">
-        <div className="bg-slate-200 p-40 text-center">
+        <div className="bg-slate-200 p-10 md:p-20 lg:p-40 text-center">
           <h1>Find out who I am and what I can bring to the world of web development</h1>
         </div>
         <div id="about" className="bg-slate-100 space-y-5 py-20">
           <div className="flex flex-col items-center space-y-6">
               <h1>HEY, I'M LLUIS ADAN</h1>
-              <hr className="w-30" />
-              <div className="max-w-150 mx-10">
-                <p className="text-center">Want to know more about me?</p>
-              </div>
+              <div className="w-30 h-1 border border-teal-600 rounded-2xl bg-teal-600"></div>
+              <p className="text-center mt-2">Want to know more about me?</p>
           </div>
           
           <div className="space-x-5 flex justify-around mt-20 mx-10">
@@ -88,10 +86,8 @@ function App() {
         <div id="projects" className="bg-slate-200 flex flex-col items-center py-20">
           <div className="flex flex-col items-center space-y-6">
               <h1>PROJECTS</h1>
-              <hr className="w-30" />
-              <div className="max-w-150 mx-10">
-                <p className="text-center">Here you will find some of my personal projects and the skills learned from each one</p>
-              </div>
+              <div className="w-30 h-1 border border-teal-600 rounded-2xl bg-teal-600"></div>
+              <p className="max-w-150 mt-2 text-center">Here you will find some of my personal projects and the skills learned from each one</p>
           </div>
 
           <Project />
@@ -102,8 +98,31 @@ function App() {
         
       </main>
 
-      <footer className="w-full sm:w-auto h-50 bg-black"> 
-        <h1 className="text-white">FOOTER</h1>
+      <footer className="w-full bg-black">
+        <div className="flex justify-around p-10">
+          <div className="text-white flex flex-col justify-center">
+            <h3>LLUIS ADAN</h3>
+            <p className="text-xs">Passionate about technology</p>
+          </div>
+
+          <div className="text-white">
+            <div className="text-center">
+              <h3>SOCIAL</h3>
+            </div>
+            <div className="flex justify-center mt-2">
+              <a href="https://linkedin.com/in/lluis-adan" target="_blank">
+                <img className="w-10" src="/img/linkedin.png" alt="Lluis Adan Linkedin Profile" />
+              </a>
+              <a href="https://github.com/LluisAdan" target="_blank">
+                <img className="w-10" src="/img/github.png" alt="Lluis Adan Github Profile" />
+              </a>
+            </div>
+          </div>
+        </div>
+        
+        <div className="text-white text-center text-xs">
+          <p>&copy; Copyright 2025. Made by <u>Lluis Adan</u></p>
+        </div>
       </footer>
     </div>
   )

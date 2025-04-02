@@ -40,13 +40,11 @@ export default function ContactForm() {
   }
 
   return (
-    <div id="contact" className="w-full sm:w-auto bg-slate-100 flex flex-col items-center py-20">
+    <div id="contact" className="w-full bg-slate-100 flex flex-col items-center py-20">
       <div className="flex flex-col items-center space-y-6">
         <h1>CONTACT</h1>
-        <hr className="w-30" />
-        <div className="max-w-150 mx-10">
-          <p className="text-center">Feel free to contact me</p>
-        </div>
+        <div className="w-30 h-1 border border-teal-600 rounded-2xl bg-teal-600"></div>
+        <p className="text-center mt-2">Feel free to contact me</p>
       </div>
 
       <form onSubmit={handleSubmit} className="bg-slate-200 mt-20 mx-10 border p-10 space-y-10">
@@ -92,7 +90,7 @@ export default function ContactForm() {
           <div className="w-20 h-10 flex justify-center items-center">
             <button
               type="submit"
-              className="p-2 text-1xl cursor-pointer border-2 rounded-2xl border-slate-200 border-y-slate-500 hover:border-y-slate-200 hover:border-slate-500 hover:text-sm"
+              className="p-2 text-1xl cursor-pointer border-2 rounded-2xl hover:text-white hover:bg-teal-700 border-slate-200 border-y-slate-500 hover:border-teal-700 hover:text-sm"
             >
               SUBMIT
             </button>  

@@ -29,18 +29,18 @@ export default function Project() {
             <div className="mt-3 space-x-5 flex">
               <div>
                 <div className="w-40 h-10 flex justify-center items-center">
-                  <a href={project.url} >
-                    <div className="text-center p-2 border-2 rounded-2xl border-slate-200 border-y-slate-500 hover:border-y-slate-200 hover:border-slate-500 hover:text-sm">
+                  <a href={project.url} target="_blank">
+                    <div className="text-center p-2 hover:text-white hover:bg-teal-700 border-2 rounded-2xl border-slate-200 border-y-slate-500 hover:border-teal-700  hover:text-sm">
                       <h4>VISIT PROJECT</h4>
                     </div>
                   </a>
                 </div>
               </div>  
               <div className="w-40 h-10 flex justify-center items-center">
-              <a href={project.git} >
-                    <div className="text-center p-2 border-2 rounded-2xl border-slate-200 border-y-slate-500 hover:border-y-slate-200 hover:border-slate-500 hover:text-sm">
-                      <h4>GITHUB</h4>
-                    </div>
+              <a href={project.git} target="_blank">
+                <div className="text-center p-2 hover:text-white hover:bg-teal-700 border-2 rounded-2xl border-slate-200 border-y-slate-500 hover:border-teal-700 hover:text-sm">
+                  <h4>GITHUB</h4>
+                </div>
                   </a>
               </div>
 
