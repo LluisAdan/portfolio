@@ -40,14 +40,14 @@ export default function ContactForm() {
   }
 
   return (
-    <div id="contact" className="w-full bg-slate-100 flex flex-col items-center py-20">
+    <div id="contact" className="w-full bg-slate-100 flex flex-col items-center py-20 px-4 sm:px-10">
       <div className="flex flex-col items-center space-y-6">
         <h1>CONTACT</h1>
         <div className="w-30 h-1 border border-teal-600 rounded-2xl bg-teal-600"></div>
-        <p className="text-center mt-2">Feel free to contact me</p>
+        <p className="mt-2">Feel free to contact me</p>
       </div>
 
-      <form onSubmit={handleSubmit} className="bg-slate-200 mt-20 mx-10 border p-10 space-y-10">
+      <form onSubmit={handleSubmit} className="bg-slate-200 mt-10 w-full max-w-lg border p-6 sm:p-10 space-y-6 rounded-lg shadow-md">
         <div className="w-full space-y-2">
           <label htmlFor="name" className="block font-medium">Name</label>
           <input 
@@ -57,7 +57,7 @@ export default function ContactForm() {
             onChange={handleChange}
             placeholder="Enter your name"
             required
-            className="w-200 h-10 bg-slate-100 p-2"
+            className="w-full h-10 bg-slate-100 p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-600"
           />
         </div>
 
@@ -70,7 +70,7 @@ export default function ContactForm() {
           onChange={handleChange}
           placeholder="Enter your email"
           required
-          className="w-200 h-10 bg-slate-100 p-2"
+          className="w-200 h-10 bg-slate-100 p-2 w-full h-10 bg-slate-100 p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-600"
           />
         </div>
         
@@ -82,7 +82,7 @@ export default function ContactForm() {
           onChange={handleChange}
           placeholder="Enter your message"
           required
-          className="w-200 h-10 bg-slate-100 p-2 resize-none h-50"
+          className="w-full h-32 bg-slate-100 p-2 border border-gray-300 rounded-md resize-none focus:outline-none focus:ring-2 focus:ring-teal-600"
           ></textarea>
         </div>
 
@@ -90,15 +90,14 @@ export default function ContactForm() {
           <div className="w-20 h-10 flex justify-center items-center">
             <button
               type="submit"
-              className="p-2 text-1xl cursor-pointer border-2 rounded-2xl hover:text-white hover:bg-teal-700 border-slate-200 border-y-slate-500 hover:border-teal-700 hover:text-sm"
-            >
+              className="p-2 text-1xl cursor-pointer border-2 rounded-2xl hover:text-white hover:bg-teal-700 border-slate-200 border-y-teal-700 hover:border-teal-700 hover:text-sm transition-all duration-200">
               SUBMIT
             </button>  
           </div>
         </div>
       </form>
 
-      {status && <p className="mt-4 text-center">{status}</p>}
+      {status && <p className="mt-4 text-center text-teal-700 font-medium">{status}</p>}
 
     </div>
   )

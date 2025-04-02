@@ -20,7 +20,7 @@ export default function Navbar() {
             to="about" 
             smooth={true} 
             duration={500} 
-            className="p-2 cursor-pointer font-bold hover:text-teal-700 hover:rounded-2xl hover:border-2 hover:border-slate-50 hover:border-y-teal-700 hover:text-sm">
+            className="p-2 cursor-pointer font-bold hover:border-2 hover:text-teal-700 hover:rounded-2xl hover:border-slate-50 hover:border-y-teal-700 hover:text-sm">
             ABOUT
           </Link>
         </div>

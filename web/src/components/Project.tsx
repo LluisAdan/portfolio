@@ -30,7 +30,7 @@ export default function Project() {
               <div>
                 <div className="w-40 h-10 flex justify-center items-center">
                   <a href={project.url} target="_blank">
-                    <div className="text-center p-2 hover:text-white hover:bg-teal-700 border-2 rounded-2xl border-slate-200 border-y-slate-500 hover:border-teal-700  hover:text-sm">
+                    <div className="text-center p-2 hover:text-white hover:bg-teal-700 border-2 rounded-2xl border-slate-200 border-y-teal-700 hover:border-teal-700  hover:text-sm transition-all duration-200">
                       <h4>VISIT PROJECT</h4>
                     </div>
                   </a>
@@ -38,7 +38,7 @@ export default function Project() {
               </div>  
               <div className="w-40 h-10 flex justify-center items-center">
               <a href={project.git} target="_blank">
-                <div className="text-center p-2 hover:text-white hover:bg-teal-700 border-2 rounded-2xl border-slate-200 border-y-slate-500 hover:border-teal-700 hover:text-sm">
+                <div className="text-center p-2 hover:text-white hover:bg-teal-700 border-2 rounded-2xl border-slate-200 border-y-teal-700 hover:border-teal-700 hover:text-sm transition-all duration-200">
                   <h4>GITHUB</h4>
                 </div>
                   </a>
