@@ -15,6 +15,9 @@ const projectSchema = new Schema(
     image: {
       type: String
     },
+    options: {
+      type: [String]
+    },
     url: {
       type: String
     },

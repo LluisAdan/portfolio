@@ -5,6 +5,7 @@ export type Project = {
   title: string;
   description: string;
   image: string;
+  options: [string];
   url: string;
   git: string;
   skills: [string];

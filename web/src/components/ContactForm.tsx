@@ -44,7 +44,7 @@ export default function ContactForm() {
       <div className="flex flex-col items-center space-y-6">
         <h1>CONTACT</h1>
         <div className="w-30 h-1 border border-teal-600 rounded-2xl bg-teal-600"></div>
-        <p className="mt-2">Feel free to contact me</p>
+        <p className="mt-2 text-gray-600 text-xl">Feel free to contact me</p>
       </div>
 
       <form onSubmit={handleSubmit} className="bg-slate-200 mt-10 w-full max-w-lg border p-6 sm:p-10 space-y-6 rounded-lg shadow-md">
@@ -90,7 +90,7 @@ export default function ContactForm() {
           <div className="w-20 h-10 flex justify-center items-center">
             <button
               type="submit"
-              className="p-2 text-1xl cursor-pointer border-2 rounded-2xl hover:text-white hover:bg-teal-700 border-slate-200 border-y-teal-700 hover:border-teal-700 hover:text-sm transition-all duration-200">
+              className="cursor-pointer text-center p-2 text-sm font-semibold border-2 rounded-2xl hover:text-white hover:bg-teal-700 border-slate-200 border-y-teal-700 hover:border-teal-700 transition-all duration-200">
               SUBMIT
             </button>  
           </div>
