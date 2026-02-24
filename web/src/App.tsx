@@ -18,28 +18,61 @@ function App() {
       <Navbar />
 
       <main className="pt-18">
-        <div 
-          className="bg-slate-200 p-10 md:p-20 lg:p-40 text-center flex flex-col items-center bg-cover bg-center"
+        <div
+          className="bg-contain bg-center p-10 md:p-20 lg:p-40 text-center flex flex-col items-center"
+          style={{ backgroundImage: "url('/img/Fondo_porfolio.jpg')" }}
         >
-          <h1 >Find out who I am and what I can bring to the world of web development</h1>
-          <div className="w-20 flex justify-center items-center mt-14">
-            <Link to="projects" smooth={true} duration={500} className="cursor-pointer text-center p-2 text-2xl font-semibold border-2 rounded-2xl hover:text-white hover:bg-teal-700 border-slate-200 border-y-teal-700 hover:border-teal-700 transition-all duration-200">PROJECTS</Link>
-          </div>
+          <motion.h1
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.3, duration: 1 }}
+          className="text-3xl md:text-4xl lg:text-5xl font-bold"
+          >
+          Find out who I am and what I can bring to the world of web development
+          </motion.h1>
+          
+          <motion.div
+            className="w-20 flex justify-center items-center mt-14"
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ delay: 0.8, duration: 0.5 }}
+          >
+            <Link
+              to="projects"
+              smooth={true}
+              duration={500}
+              className="cursor-pointer text-center p-2 text-2xl font-semibold border-2 rounded-2xl hover:text-white hover:bg-teal-700 border-slate-200 border-y-teal-700 hover:border-teal-700 transition-all duration-200"
+            >
+              PROJECTS
+            </Link>
+          </motion.div>
         </div>
 
-
-        <div id="about" className="bg-slate-100 space-y-5 py-20 px-4 md:px-10">
-          <div className="flex flex-col items-center space-y-6 text-center">
-              <h1>HEY!!I'm Lluis Adan</h1>
-              <div className="w-30 h-1 border border-teal-600 rounded-2xl bg-teal-600"></div>
-              <p className="mt-2 text-center text-gray-600 text-xl">Want to know more about me?</p>
-          </div>
+        <div 
+          id="about" 
+          className="bg-slate-100 space-y-5 py-20 px-4 md:px-10"
+        >
+        <motion.div
+          className="flex flex-col items-center space-y-6 text-center"
+          initial={{ opacity: 0, y: 40 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.6 }}
+        >
+          <h1>I'm Lluis Adan</h1>
+          <div className="w-30 h-1 border border-teal-600 rounded-2xl bg-teal-600"></div>
+          <p className="mt-2 text-center text-gray-600 text-xl">Want to know more about me?</p>
+        </motion.div>
           
           <div className="flex flex-col md:flex-row justify-between mt-15 mx-auto max-w-5xl">
-            <div className="w-full md:w-1/2 p-5">
+            <motion.div
+              className="w-full md:w-1/2 p-5"
+              initial={{ opacity: 0, x: -40 }}
+              animate={isInView ? { opacity: 1, x: 0 } : {}}
+              transition={{ duration: 0.6 }}
+            >
               <h2 className="mb-4">From infrastructure to code</h2>
               <p className="text-gray-700">
-                I'm a Full Stack Developer with experience in JavaScript (ES6) and ReactJS, combined with a solid background as a systems technician.              
+                I'm a Full Stack Developer with experience in JavaScript (ES6) and ReactJS, combined with a solid background as a systems technician.
               </p>
               <p className="text-gray-700 mt-4">
                 Thanks to this background, I not only develop efficient applications, but I also understand the infrastructure that supports them, from servers to network configurations.
@@ -47,8 +80,7 @@ function App() {
               <p className="text-gray-700 mt-4">
                 I am passionate about technology and the challenges it brings. I consider myself a resolute, proactive and constantly learning person, always exploring new tools and trends to improve my skills and provide innovative solutions.
               </p>
-            </div>
-
+            </motion.div>
             <div className="w-full md:w-1/2 p-5">
               <h2 className="mb-4">My Skills</h2>
               <div className="flex flex-wrap gap-2">

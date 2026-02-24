@@ -47,7 +47,7 @@ export default function ContactForm() {
         <p className="mt-2 text-gray-600 text-xl">Feel free to contact me</p>
       </div>
 
-      <form onSubmit={handleSubmit} className="bg-slate-200 mt-10 w-full max-w-lg border p-6 sm:p-10 space-y-6 rounded-lg shadow-md">
+      <form onSubmit={handleSubmit} className="bg-slate-200 mt-10 w-full max-w-lg p-6 sm:p-10 space-y-6 rounded-lg shadow-md">
         <div className="w-full space-y-2">
           <label htmlFor="name" className="block font-medium">Name</label>
           <input 
