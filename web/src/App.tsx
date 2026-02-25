@@ -30,7 +30,7 @@ function App() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3, duration: 1 }}
           className="relative z-10 text-3xl md:text-4xl lg:text-5xl font-bold text-slate-100 max-w-4xl leading-tight"
-        >
+        > 
           Find out who I am and what I can bring to the world of web development
         </motion.h1>
 
