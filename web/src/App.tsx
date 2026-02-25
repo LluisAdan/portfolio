@@ -55,6 +55,7 @@ function App() {
           className="bg-slate-900 space-y-5 py-20 px-4 md:px-10 border-t border-slate-800"
         >
           <motion.div
+            ref={ref}
             className="flex flex-col items-center space-y-6 text-center"
             initial={{ opacity: 0, y: 40 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -89,7 +90,6 @@ function App() {
               {["HTML", "CSS", "JavaScript", "React", "Node", "Express", "MongoDB", "Git", "Github", "Docker", "Tailwind CSS", "Bootstrap", "Responsive"].map((skill, index) => (
                 <motion.div
                   key={skill}
-                  ref={ref}
                   initial={{ opacity: 0, y: 20 }}
                   animate={isInView ? { opacity: 1, y: 0 } : {}}
                   transition={{ delay: index * 0.10 }}
@@ -106,28 +106,47 @@ function App() {
       <ContactForm />
     </main>
 
-    <footer className="w-full bg-black">
-      <div className="flex flex-col md:flex-row justify-between items-center px-6 md:px-10">
-        <div className="text-white flex flex-col items-center md:items-start text-center md:text-left mt-4">
+    <footer className="w-full bg-slate-950 border-t border-slate-800">
+      <div className="flex flex-col md:flex-row justify-between items-center px-6 md:px-10 py-2">
+        <div className="text-slate-100 flex flex-col items-center md:items-start text-center md:text-left mt-4">
           <h3>LLUIS ADAN</h3>
-          <p className="text-xs text-gray-400">Full Stack Developer</p>
+          <p className="text-xs text-slate-400">Full Stack Developer</p>
         </div>
 
-        <div className="text-white mt-4">
+        <div className="text-slate-100 mt-4">
           <h3 className="text-center">SOCIAL</h3>
-          <div className="flex justify-center space-x-4 mt-1">
-            <a href="https://linkedin.com/in/lluis-adan" target="_blank" rel="noopener noreferrer">
-              <img className="w-8 md:w-10" src={LinkedinPhoto} alt="Lluis Adan Linkedin Profile" />
+          <div className="flex justify-center space-x-4 mt-2">
+            <a
+              href="https://linkedin.com/in/lluis-adan"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-2 rounded-xl border border-slate-800 bg-slate-900 hover:border-sky-500/40 transition-colors duration-200"
+            >
+              <img
+                className="w-8 md:w-10 opacity-90 hover:opacity-100 hover:scale-105 transition-all duration-200"
+                src={LinkedinPhoto}
+                alt="Lluis Adan Linkedin Profile"
+              />
             </a>
-            <a href="https://github.com/LluisAdan" target="_blank" rel="noopener noreferrer">
-              <img className="w-8 md:w-10" src={GithubPhoto} alt="Lluis Adan Github Profile" />
+
+            <a
+              href="https://github.com/LluisAdan"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-2 rounded-xl border border-slate-800 bg-slate-900 hover:border-sky-500/40 transition-colors duration-200"
+            >
+              <img
+                className="w-8 md:w-10 opacity-90 hover:opacity-100 hover:scale-105 transition-all duration-200"
+                src={GithubPhoto}
+                alt="Lluis Adan Github Profile"
+              />
             </a>
           </div>
         </div>
       </div>
-      
-      <div className="p-2 text-white text-center text-xs mt-6 border-t border-gray-700 pt-4">
-        <p>&copy; Copyright 2025. Made by <u>Lluis Adan</u></p>
+
+      <div className="p-2 text-slate-200 text-center text-xs mt-6 border-t border-slate-800 pt-4">
+        <p>&copy; Copyright 2026. Made by <u>Lluis Adan</u></p>
       </div>
     </footer>
   </div>
