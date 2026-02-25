@@ -2,6 +2,7 @@ import { useState, useEffect } from "react"
 import { getProjects } from "../services/api.service"
 import type { Project } from "../types"
 import { motion } from "framer-motion"
+import ButtonLink from "./ButtonLink"
 
 export default function Project() {
   const [projects, setProjects] = useState<Project[]>([])
@@ -62,11 +63,11 @@ export default function Project() {
                 <div className="flex flex-col md:flex-row md:justify-between md:items-center items-center text-center gap-2">
                   <h2 className="text-2xl font-semibold text-slate-100">{project.title}</h2>
 
-                  <div className="flex flex-wrap gap-2 justify-center md:justify-end mt-2 md:mt-0">
+                  <div className="flex flex-wrap gap-2 justify-center md:justify-end mt-2 md:mt-0 select-none">
                     {project.options.map((option) => (
                       <div
                         key={`${project.id}-option-${option}`}
-                        className="h-9 rounded-xl px-3 flex items-center justify-center text-xs md:text-sm bg-slate-800 border border-slate-700 text-slate-300"
+                        className="cursor-default h-9 rounded-xl px-3 flex items-center justify-center text-xs md:text-sm bg-slate-800 border border-slate-700 text-slate-300 hover:border-sky-500/50 hover:bg-slate-700 transition-colors"                      
                       >
                         <span className="m-1">{option}</span>
                       </div>
@@ -79,7 +80,7 @@ export default function Project() {
 
               <p className="text-slate-300 leading-relaxed">{project.description}</p>
 
-              <div className="flex flex-wrap gap-2">
+              <div className="flex flex-wrap gap-2 select-none">
                 {project.skills.map((skill) => (
                   <span
                     key={`${project.id}-skill-${skill}`}
@@ -91,23 +92,13 @@ export default function Project() {
               </div>
 
               <div className="mt-4 flex flex-wrap justify-center md:justify-start gap-3">
-                <a
-                  href={project.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-center px-4 py-2 text-sm font-semibold rounded-xl border border-sky-500/40 bg-slate-900 text-slate-100 hover:bg-sky-500/20 hover:border-sky-400 hover:text-white transition-all duration-200"
-                >
+                <ButtonLink href={project.url} target="_blank" rel="noopener noreferrer" variant="primary">
                   VISIT PROJECT
-                </a>
+                </ButtonLink>
 
-                <a
-                  href={project.git}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-center px-4 py-2 text-sm font-semibold rounded-xl border border-slate-700 bg-slate-800 text-slate-200 hover:border-sky-500/40 hover:text-sky-300 transition-all duration-200"
-                >
+                <ButtonLink href={project.git} target="_blank" rel="noopener noreferrer" variant="secondary">
                   GITHUB
-                </a>
+                </ButtonLink>
               </div>
             </div>
           </motion.div>

@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { Link } from 'react-scroll'
 import { Menu, X } from 'lucide-react'
-import LluisPhoto from '/src/assets/profile/LluisFoto.jpg'
+import LluisPhoto from '/src/assets/profile/Lluís_perfil.jpg'
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)

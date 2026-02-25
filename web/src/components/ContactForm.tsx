@@ -1,4 +1,5 @@
 import { useState } from "react"
+import Button from "./Button"
 
 type FormData = {
   name: string
@@ -97,12 +98,7 @@ export default function ContactForm() {
         </div>
 
         <div className="w-full flex justify-end">
-          <button
-            type="submit"
-            className="cursor-pointer text-center px-4 py-2 text-sm font-semibold rounded-xl border border-sky-500/40 bg-slate-900 text-slate-100 hover:bg-sky-500/20 hover:border-sky-400 hover:text-white transition-all duration-200"
-          >
-            SUBMIT
-          </button>
+          <Button type="submit">SUBMIT</Button>
         </div>
       </form>
 
