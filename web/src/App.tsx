@@ -28,13 +28,13 @@ function App() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3, duration: 1 }}
-            className="relative z-10 text-3xl md:text-4xl lg:text-5xl font-bold text-slate-100 max-w-4xl leading-tight"
+            className="relative z-10 text-3xl md:text-4xl lg:text-5xl font-bold text-slate-100 max-w-4xl leading-tight tracking-tight"
           > 
             Find out who I am and what I can bring to the world of web development
           </motion.h1>
 
           <motion.div
-            className="relative z-10 w-20 flex justify-center items-center mt-14"
+            className="relative z-10 flex justify-center items-center mt-12 md:mt-14"
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.8, duration: 0.5 }}
@@ -66,27 +66,27 @@ function App() {
             <p className="mt-2 text-center text-slate-400 text-xl">Want to know more about me?</p>
           </motion.div>
           
-          <div className="flex flex-col md:flex-row justify-between mt-15 mx-auto max-w-5xl">
+          <div className="flex flex-col md:flex-row justify-between gap-8 md:gap-10 mt-12 mx-auto max-w-6xl">
             <motion.div
-              className="w-full md:w-1/2 p-5"
+              className="w-full md:w-1/2 p-4 md:p-5"
               initial={{ opacity: 0, x: -40 }}
               animate={isInView ? { opacity: 1, x: 0 } : {}}
               transition={{ duration: 0.6 }}
             >
               <h2 className="mb-4">From infrastructure to code</h2>
-              <p className="text-slate-300">
+              <p className="text-slate-300 leading-relaxed">
                 I'm a Full Stack Developer with experience in JavaScript (ES6) and ReactJS, combined with a solid background as a systems technician.
               </p>
-              <p className="text-slate-300 mt-4">
+              <p className="text-slate-300 mt-4 leading-relaxed">
                 Thanks to this background, I not only develop efficient applications, but I also understand the infrastructure that supports them, from servers to network configurations.
               </p>
-              <p className="text-slate-300 mt-4">
+              <p className="text-slate-300 mt-4 leading-relaxed">
                 I am passionate about technology and the challenges it brings. I consider myself a resolute, proactive and constantly learning person, always exploring new tools and trends to improve my skills and provide innovative solutions.
               </p>
             </motion.div>
-            <div className="w-full md:w-1/2 p-5">
+            <div className="w-full md:w-1/2 p-4 md:p-5">
               <h2 className="mb-4">My Skills</h2>
-              <div className="flex flex-wrap gap-2">
+              <div className="flex flex-wrap gap-2.5">
               {["HTML", "CSS", "JavaScript", "React", "Node", "Express", "MongoDB", "Git", "Github", "Docker", "Tailwind CSS", "Bootstrap", "Responsive"].map((skill, index) => (
                 <motion.div
                   key={skill}
@@ -107,7 +107,7 @@ function App() {
     </main>
 
     <footer className="w-full bg-slate-950 border-t border-slate-800">
-      <div className="flex flex-col md:flex-row justify-between items-center px-6 md:px-10 py-2">
+      <div className="flex flex-col md:flex-row justify-between items-center px-6 md:px-10 py-6 gap-4">
         <div className="text-slate-100 flex flex-col items-center md:items-start text-center md:text-left mt-4">
           <h3>LLUIS ADAN</h3>
           <p className="text-xs text-slate-400">Full Stack Developer</p>
@@ -145,7 +145,7 @@ function App() {
         </div>
       </div>
 
-      <div className="p-2 text-slate-200 text-center text-xs mt-6 border-t border-slate-800 pt-4">
+      <div className="px-4 py-4 text-slate-300 text-center text-xs border-t border-slate-800">
         <p>&copy; Copyright 2026. Made by <u>Lluis Adan</u></p>
       </div>
     </footer>
