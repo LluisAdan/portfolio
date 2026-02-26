@@ -45,9 +45,9 @@ export default function ContactForm() {
     >
       <div className="w-full max-w-6xl mx-auto flex flex-col items-center">
         <div className="flex flex-col items-center space-y-6 text-center">
-          <h1 className="text-3xl md:text-4xl tracking-tight">CONTACT</h1>
+          <h1 className="text-3xl md:text-4xl tracking-tight">CONTACTO</h1>
           <div className="w-32 h-px rounded-full bg-gradient-to-r from-transparent via-sky-300/60 to-transparent"></div>
-          <p className="mt-2 text-slate-400 text-lg md:text-xl">Feel free to contact me</p>
+          <p className="mt-2 text-slate-400 text-lg md:text-xl">Si quieres, puedes escribirme</p>
         </div>
 
         <form
@@ -56,14 +56,14 @@ export default function ContactForm() {
         >
           <div className="w-full space-y-2">
             <label htmlFor="name" className="block font-medium text-slate-200">
-              Name
+              Nombre
             </label>
             <input
               type="text"
               name="name"
               value={formData.name}
               onChange={handleChange}
-              placeholder="Enter your name"
+              placeholder="Tu nombre"
               required
               className="w-full h-11 bg-slate-900 text-slate-100 placeholder:text-slate-500 p-3 border border-slate-700 rounded-md focus:outline-none focus:ring-2 focus:ring-sky-300/60 focus:border-sky-300/60"
             />
@@ -78,7 +78,7 @@ export default function ContactForm() {
               name="email"
               value={formData.email}
               onChange={handleChange}
-              placeholder="Enter your email"
+              placeholder="Tu email"
               required
               className="w-full h-11 bg-slate-900 text-slate-100 placeholder:text-slate-500 p-3 border border-slate-700 rounded-md focus:outline-none focus:ring-2 focus:ring-sky-300/60 focus:border-sky-300/60"
             />
@@ -86,20 +86,20 @@ export default function ContactForm() {
 
           <div className="w-full space-y-2">
             <label htmlFor="message" className="block font-medium text-slate-200">
-              Message
+              Mensaje
             </label>
             <textarea
               name="message"
               value={formData.message}
               onChange={handleChange}
-              placeholder="Enter your message"
+              placeholder="Tu mensaje"
               required
               className="w-full h-32 bg-slate-900 text-slate-100 placeholder:text-slate-500 p-3 border border-slate-700 rounded-md resize-none focus:outline-none focus:ring-2 focus:ring-sky-300/60 focus:border-sky-300/60"
             ></textarea>
           </div>
 
           <div className="w-full flex justify-end">
-            <Button type="submit">SUBMIT</Button>
+            <Button type="submit">ENVIAR</Button>
           </div>
         </form>
 

@@ -33,8 +33,17 @@ function App() {
             transition={{ delay: 0.3, duration: 1 }}
             className="relative z-10 text-3xl md:text-4xl lg:text-5xl font-bold text-slate-100 max-w-4xl leading-tight tracking-tight"
           > 
-            Find out who I am and what I can bring to the world of web development
+            Desarrollador Full Stack
           </motion.h1>
+
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.45, duration: 0.9 }}
+            className="relative z-10 mt-5 max-w-3xl text-lg md:text-xl text-slate-300 leading-relaxed"
+            >
+            Construyo aplicaciones web completas con React y Node. APIs REST, autenticación, base de datos y despliegue.
+          </motion.p>
 
           <motion.div
             className="relative z-10 flex justify-center items-center mt-12 md:mt-14"
@@ -48,7 +57,7 @@ function App() {
               duration={500}
               className={btnPrimary}
             >
-            PROJECTS
+            VER PROYECTOS
             </Link>
           </motion.div>
         </div>
@@ -66,10 +75,10 @@ function App() {
               transition={{ duration: 0.6 }}
             >
               <h1 className="text-3xl md:text-4xl tracking-tight text-slate-100">
-                I'm Lluis Adan
+                Soy Lluís Adán
               </h1>
               <div className="w-32 h-px rounded-full bg-gradient-to-r from-transparent via-sky-300/80 to-transparent"></div>
-              <p className="mt-2 text-center text-slate-400 text-lg md:text-xl">Want to know more about me?</p>
+              <p className="mt-2 text-center text-slate-400 text-lg md:text-xl">¿Quieres saber más sobre mí?</p>
             </motion.div>
             
             <div className="flex flex-col md:flex-row justify-between gap-8 md:gap-10 mt-12 mx-auto max-w-6xl">
@@ -79,21 +88,37 @@ function App() {
                 animate={isInView ? { opacity: 1, x: 0 } : {}}
                 transition={{ duration: 0.6 }}
               >
-                <h2 className="mb-4 text-slate-100 tracking-tight">From infrastructure to code</h2>
-                <div className="space-y-4">
-                  <p className="text-slate-300 leading-relaxed">
-                    I'm a Full Stack Developer with experience in JavaScript (ES6) and ReactJS, combined with a solid background as a systems technician.
-                  </p>
-                  <p className="text-slate-300 leading-relaxed">
-                    Thanks to this background, I not only develop efficient applications, but I also understand the infrastructure that supports them, from servers to network configurations.
-                  </p>
-                  <p className="text-slate-300 leading-relaxed">
-                    I am passionate about technology and the challenges it brings. I consider myself a resolute, proactive and constantly learning person, always exploring new tools and trends to improve my skills and provide innovative solutions.
-                  </p>
-                </div>
+                <h2 className="mb-4 text-slate-100 tracking-tight">De sistemas a desarrollo</h2>
+                
+                <p className="text-slate-300 leading-relaxed">
+                  Vengo de sistemas e infraestructura y he dado el salto a desarrollo web. Me gusta construir aplicaciones mantenibles, con buen UX y backend sólido: APIs, autenticación, datos y despliegue.                  
+                </p>
+
+                <ul className="mt-6 space-y-3 text-slate-300">
+                  <li className="flex gap-3">
+                    <span className="mt-2 h-1.5 w-1.5 rounded-full bg-sky-300/80 shrink-0"></span>
+                    <span>
+                      <strong className="text-slate-100 font-semibold">Frontend:</strong> React + TypeScript, componentes, formularios y responsive.
+                    </span>
+                  </li>
+
+                  <li className="flex gap-3">
+                    <span className="mt-2 h-1.5 w-1.5 rounded-full bg-sky-300/80 shrink-0"></span>
+                    <span>
+                      <strong className="text-slate-100 font-semibold">Backend:</strong> Node/Express, APIs REST, CRUD, autenticación y manejo de errores.
+                    </span>
+                  </li>
+
+                  <li className="flex gap-3">
+                    <span className="mt-2 h-1.5 w-1.5 rounded-full bg-sky-300/80 shrink-0"></span>
+                    <span>
+                      <strong className="text-slate-100 font-semibold">Despliegue y herramientas:</strong> Git, Docker y despliegue de proyectos reales.
+                    </span>
+                  </li>
+                </ul>
               </motion.div>
               <div className="w-full md:w-1/2 p-4 md:p-5">
-                <h2 className="mb-4 text-slate-100 tracking-tight">My Skills</h2>
+                <h2 className="mb-4 text-slate-100 tracking-tight">Tecnologías</h2>
                 <div className="flex flex-wrap gap-2.5 select-none">
                 {["HTML", "CSS", "JavaScript", "React", "Node", "Express", "MongoDB", "Git", "Github", "Docker", "Tailwind CSS", "Bootstrap", "Responsive"].map((skill, index) => (
                   <motion.div
@@ -119,12 +144,12 @@ function App() {
     <footer className="w-full bg-slate-950 border-t border-slate-800">
       <div className="flex flex-col md:flex-row justify-between items-center px-6 md:px-10 py-6 gap-4">
         <div className="text-slate-100 flex flex-col items-center md:items-start text-center md:text-left mt-4">
-          <h3>LLUIS ADAN</h3>
-          <p className="text-xs text-slate-400">Full Stack Developer</p>
+          <h3>Lluís Adán</h3>
+          <p className="text-xs text-slate-400">Desarrollador Full Stack</p>
         </div>
 
         <div className="text-slate-100 mt-4">
-          <h3 className="text-center">SOCIAL</h3>
+          <h3 className="text-center">REDES</h3>
           <div className="flex justify-center space-x-4 mt-2">
             <a
               href="https://linkedin.com/in/lluis-adan"
@@ -156,7 +181,7 @@ function App() {
       </div>
 
       <div className="px-4 py-4 text-slate-300 text-center text-xs border-t border-slate-800">
-        <p>&copy; Copyright 2026. Made by <u>Lluís Adán</u></p>
+        <p>&copy; Copyright 2026. Creado por <u>Lluís Adán</u></p>
       </div>
     </footer>
   </div>

@@ -42,7 +42,7 @@ export default function Navbar() {
             activeClass="text-sky-300 after:w-full"
             className={navLinkClass}          
           >
-            ABOUT
+            SOBRE MÍ
           </Link>
         </div>
         <div className="w-24 flex justify-center items-center">
@@ -57,7 +57,7 @@ export default function Navbar() {
             activeClass="text-sky-300 after:w-full"
             className={navLinkClass}          
           >
-            PROJECTS
+            PROYECTOS
           </Link>
         </div>
         <div className="w-24 flex justify-center items-center">
@@ -72,7 +72,7 @@ export default function Navbar() {
             activeClass="text-sky-300 after:w-full"
             className={navLinkClass}          
           >
-            CONTACT
+            CONTACTO
           </Link>
         </div>
       </div>
