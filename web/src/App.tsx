@@ -66,7 +66,7 @@ function App() {
               transition={{ duration: 0.6 }}
             >
               <h1>I'm Lluis Adan</h1>
-              <div className="w-30 h-1 border border-sky-500 rounded-2xl bg-sky-500"></div>
+              <div className="w-32 h-px rounded-full bg-gradient-to-r from-transparent via-sky-300/80 to-transparent"></div>
               <p className="mt-2 text-center text-slate-400 text-xl">Want to know more about me?</p>
             </motion.div>
             

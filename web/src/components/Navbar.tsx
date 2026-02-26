@@ -7,8 +7,8 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
 
   const navLinkClass =
-    "p-2 cursor-pointer font-semibold text-slate-300 hover:text-sky-400 transition-colors duration-200"
-
+    "relative p-2 cursor-pointer font-semibold text-slate-300 hover:text-sky-400 transition-colors duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-500/60 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950 rounded-lg after:absolute after:left-1/2 after:-bottom-1 after:h-px after:w-0 after:-translate-x-1/2 after:bg-gradient-to-r after:from-sky-300/30 after:via-sky-300/80 after:to-sky-300/30 after:transition-all after:duration-200 hover:after:w-full"
+    
   return (
     <nav className="w-full bg-slate-950/85 border-b border-slate-800 px-6 flex justify-between items-center fixed top-0 z-50 backdrop-blur-md shadow-md shadow-black/20">
       <div className="flex justify-around items-center space-x-3 py-3">
@@ -29,17 +29,47 @@ export default function Navbar() {
 
       <div className="hidden md:flex space-x-6 lg:space-x-8">
         <div className="w-24 flex justify-center items-center">
-          <Link to="about" smooth={true} duration={500} className={navLinkClass}>
+          <Link 
+            to="about" 
+            smooth={true}
+            duration={500}
+            spy={true}
+            hashSpy={true}
+            spyThrottle={50}
+            offset={-190}
+            activeClass="text-sky-400 after:w-full"
+            className={navLinkClass}          
+          >
             ABOUT
           </Link>
         </div>
         <div className="w-24 flex justify-center items-center">
-          <Link to="projects" smooth={true} duration={500} className={navLinkClass}>
+          <Link 
+            to="projects" 
+            smooth={true}
+            duration={500}
+            spy={true}
+            hashSpy={true}
+            spyThrottle={50}
+            offset={-90}
+            activeClass="text-sky-400 after:w-full"
+            className={navLinkClass}          
+          >
             PROJECTS
           </Link>
         </div>
         <div className="w-24 flex justify-center items-center">
-          <Link to="contact" smooth={true} duration={500} className={navLinkClass}>
+          <Link 
+            to="contact" 
+            smooth={true}
+            duration={500}
+            spy={true}
+            hashSpy={true}
+            spyThrottle={50}
+            offset={-90}
+            activeClass="text-sky-400 after:w-full"
+            className={navLinkClass}          
+          >
             CONTACT
           </Link>
         </div>
@@ -61,8 +91,11 @@ export default function Navbar() {
             to="about"
             smooth={true}
             duration={500}
+            spy={true}
+            offset={-90}
+            activeClass="text-sky-400 after:w-full"
             onClick={() => setIsOpen(false)}
-            className="cursor-pointer font-semibold text-slate-200 hover:text-sky-400 transition-colors duration-200"
+            className={navLinkClass}
           >
             ABOUT
           </Link>
@@ -70,8 +103,11 @@ export default function Navbar() {
             to="projects"
             smooth={true}
             duration={500}
+            spy={true}
+            offset={-90}
+            activeClass="text-sky-400 after:w-full"
             onClick={() => setIsOpen(false)}
-            className="cursor-pointer font-semibold text-slate-200 hover:text-sky-400 transition-colors duration-200"
+            className={navLinkClass}
           >
             PROJECTS
           </Link>
@@ -79,8 +115,11 @@ export default function Navbar() {
             to="contact"
             smooth={true}
             duration={500}
+            spy={true}
+            offset={-90}
+            activeClass="text-sky-400 after:w-full"
             onClick={() => setIsOpen(false)}
-            className="cursor-pointer font-semibold text-slate-200 hover:text-sky-400 transition-colors duration-200"
+            className={navLinkClass}
           >
             CONTACT
           </Link>

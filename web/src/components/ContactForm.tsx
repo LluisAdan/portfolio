@@ -46,7 +46,7 @@ export default function ContactForm() {
       <div className="w-full max-w-6xl mx-auto flex flex-col items-center">
         <div className="flex flex-col items-center space-y-6 text-center">
           <h1 className="text-slate-100">CONTACT</h1>
-          <div className="w-30 h-1 border border-sky-500 rounded-2xl bg-sky-500"></div>
+          <div className="w-32 h-px rounded-full bg-gradient-to-r from-transparent via-sky-300/60 to-transparent"></div>
           <p className="mt-2 text-slate-400 text-xl">Feel free to contact me</p>
         </div>
 
@@ -107,6 +107,7 @@ export default function ContactForm() {
           <p className="mt-4 text-center text-sky-400 font-medium">{status}</p>
         )}
       </div>
+      <div aria-hidden="true" className="h-24"></div>
     </div>
   )
 }

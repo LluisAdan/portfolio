@@ -25,7 +25,7 @@ export default function Project() {
       <div className="w-full max-w-6xl mx-auto">
         <div className="flex flex-col items-center space-y-6 text-center">
           <h1 className="text-slate-100">PROJECTS</h1>
-          <div className="w-30 h-1 border border-sky-500 rounded-2xl bg-sky-500"></div>
+          <div className="w-32 h-px rounded-full bg-gradient-to-r from-transparent via-sky-300/80 to-transparent"></div>
           <p className="max-w-xl mt-2 text-slate-400 text-xl">
             Here you will find some of my personal projects and the skills learned from each one
           </p>
