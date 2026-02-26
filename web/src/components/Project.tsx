@@ -32,7 +32,7 @@ export default function Project() {
         </div>
 
         <div className="flex flex-col space-y-16 mt-12 w-full max-w-6xl">
-          {projects.map((project) => (
+          {[...projects].reverse().map((project) => (
             <motion.div
               key={project.id.toString()}
               className="flex flex-col md:flex-row w-full space-x-0 md:space-x-4 mb-6 rounded-2xl p-4 md:p-5 bg-slate-900 border border-slate-800 shadow-xl shadow-black/20 hover:border-slate-700 hover:bg-slate-900/80 transition-colors duration-300"
@@ -80,7 +80,16 @@ export default function Project() {
                 </div>
 
                 <p className="text-slate-300 leading-relaxed">{project.description}</p>
-
+                {project.highlights?.length ? (
+                  <ul className="mt-3 space-y-2 text-slate-300 text-sm">
+                    {project.highlights.map((h) => (
+                      <li key={`${project.id}-hl-${h}`} className="flex gap-3">
+                        <span className="mt-2 h-1.5 w-1.5 rounded-full bg-sky-300/80 shrink-0"></span>
+                        <span>{h}</span>
+                      </li>
+                    ))}
+                  </ul>
+                ) : null}
                 <div className="flex flex-wrap gap-2 select-none">
                   {project.skills.map((skill) => (
                     <span
