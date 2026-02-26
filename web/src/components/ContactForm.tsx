@@ -65,7 +65,7 @@ export default function ContactForm() {
               onChange={handleChange}
               placeholder="Enter your name"
               required
-              className="w-full h-11 bg-slate-900 text-slate-100 placeholder:text-slate-500 p-3 border border-slate-700 rounded-md focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-sky-500"
+              className="w-full h-11 bg-slate-900 text-slate-100 placeholder:text-slate-500 p-3 border border-slate-700 rounded-md focus:outline-none focus:ring-2 focus:ring-sky-300/60 focus:border-sky-300/60"
             />
           </div>
 
@@ -80,7 +80,7 @@ export default function ContactForm() {
               onChange={handleChange}
               placeholder="Enter your email"
               required
-              className="w-full h-11 bg-slate-900 text-slate-100 placeholder:text-slate-500 p-3 border border-slate-700 rounded-md focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-sky-500"
+              className="w-full h-11 bg-slate-900 text-slate-100 placeholder:text-slate-500 p-3 border border-slate-700 rounded-md focus:outline-none focus:ring-2 focus:ring-sky-300/60 focus:border-sky-300/60"
             />
           </div>
 
@@ -94,7 +94,7 @@ export default function ContactForm() {
               onChange={handleChange}
               placeholder="Enter your message"
               required
-              className="w-full h-32 bg-slate-900 text-slate-100 placeholder:text-slate-500 p-3 border border-slate-700 rounded-md resize-none focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-sky-500"
+              className="w-full h-32 bg-slate-900 text-slate-100 placeholder:text-slate-500 p-3 border border-slate-700 rounded-md resize-none focus:outline-none focus:ring-2 focus:ring-sky-300/60 focus:border-sky-300/60"
             ></textarea>
           </div>
 

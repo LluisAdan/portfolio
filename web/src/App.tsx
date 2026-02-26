@@ -13,7 +13,7 @@ function App() {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true }) 
 
-  const btnPrimary = "cursor-pointer inline-flex items-center justify-center px-6 py-2.5 text-lg md:text-xl font-semibold rounded-2xl border border-sky-500/40 bg-slate-900/60 text-slate-100 hover:bg-sky-500/20 hover:border-sky-400 hover:text-white transition-all duration-200 shadow-lg shadow-sky-500/10 backdrop-blur-sm"
+  const btnPrimary = "cursor-pointer select-none inline-flex items-center justify-center px-6 py-2.5 text-lg md:text-xl font-semibold rounded-2xl border border-sky-300/30 bg-slate-900/60 text-slate-100 hover:bg-sky-300/10 hover:border-sky-300/50 hover:text-white transition-all duration-200 shadow-lg shadow-sky-300/10 backdrop-blur-sm"
 
   return (
   <div className="font-sans bg-slate-950 text-slate-100 min-h-screen">
@@ -97,7 +97,7 @@ function App() {
                     initial={{ opacity: 0, y: 20 }}
                     animate={isInView ? { opacity: 1, y: 0 } : {}}
                     transition={{ delay: index * 0.10 }}
-                    className="cursor-default bg-slate-800 border border-slate-700 text-slate-200 h-10 rounded-xl px-4 flex items-center justify-center text-sm hover:border-sky-500/50 hover:bg-slate-700 transition-colors"
+                    className="cursor-default bg-slate-800 border border-slate-700 text-slate-200 h-10 rounded-xl px-4 flex items-center justify-center text-sm hover:border-sky-300/50 hover:bg-slate-700 transition-colors"
                   >
                     {skill}
                   </motion.div>

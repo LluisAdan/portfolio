@@ -7,21 +7,23 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
 
   const navLinkClass =
-    "relative p-2 cursor-pointer font-semibold text-slate-300 hover:text-sky-400 transition-colors duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-500/60 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950 rounded-lg after:absolute after:left-1/2 after:-bottom-1 after:h-px after:w-0 after:-translate-x-1/2 after:bg-gradient-to-r after:from-sky-300/30 after:via-sky-300/80 after:to-sky-300/30 after:transition-all after:duration-200 hover:after:w-full"
+    "relative p-2 cursor-pointer font-semibold text-slate-300 hover:text-sky-300 transition-colors duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-300/60 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950 rounded-lg after:absolute after:left-1/2 after:-bottom-1 after:h-px after:w-0 after:-translate-x-1/2 after:bg-gradient-to-r after:from-sky-300/30 after:via-sky-300/80 after:to-sky-300/30 after:transition-all after:duration-200 hover:after:w-full"
     
   return (
     <nav className="w-full bg-slate-950/85 border-b border-slate-800 px-6 flex justify-between items-center fixed top-0 z-50 backdrop-blur-md shadow-md shadow-black/20">
       <div className="flex justify-around items-center space-x-3 py-3">
-        <img
-          className="border-2 border-sky-500/70 rounded-full w-12 h-12 mr-3 object-cover"
-          src={LluisPhoto}
-          alt="Photo"
-        />
+        <div className="mr-3 rounded-full p-[2px] bg-gradient-to-br from-sky-300/60 via-sky-300/20 to-transparent shadow-lg shadow-sky-300/10">
+          <img
+            className="rounded-full w-12 h-12 object-cover bg-slate-900"
+            src={LluisPhoto}
+            alt="Photo"
+          />
+        </div>
         <Link
           to="about"
           smooth={true}
           duration={500}
-          className="cursor-pointer font-bold text-lg text-slate-100 hover:text-sky-400 transition-colors duration-200"
+          className="cursor-pointer font-bold text-lg text-slate-100 hover:text-sky-300 transition-colors duration-200"
         >
           LLUÍS ADÁN
         </Link>
@@ -37,7 +39,7 @@ export default function Navbar() {
             hashSpy={true}
             spyThrottle={50}
             offset={-190}
-            activeClass="text-sky-400 after:w-full"
+            activeClass="text-sky-300 after:w-full"
             className={navLinkClass}          
           >
             ABOUT
@@ -52,7 +54,7 @@ export default function Navbar() {
             hashSpy={true}
             spyThrottle={50}
             offset={-90}
-            activeClass="text-sky-400 after:w-full"
+            activeClass="text-sky-300 after:w-full"
             className={navLinkClass}          
           >
             PROJECTS
@@ -67,7 +69,7 @@ export default function Navbar() {
             hashSpy={true}
             spyThrottle={50}
             offset={-90}
-            activeClass="text-sky-400 after:w-full"
+            activeClass="text-sky-300 after:w-full"
             className={navLinkClass}          
           >
             CONTACT

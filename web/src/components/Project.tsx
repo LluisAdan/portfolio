@@ -68,7 +68,7 @@ export default function Project() {
                       {project.options.map((option) => (
                         <div
                           key={`${project.id}-option-${option}`}
-                          className="cursor-default h-9 rounded-xl px-3 flex items-center justify-center text-xs md:text-sm bg-slate-800 border border-slate-700 text-slate-300 hover:border-sky-500/50 hover:bg-slate-700 transition-colors"                      
+                          className="cursor-default h-9 rounded-xl px-3 flex items-center justify-center text-xs md:text-sm bg-slate-800 border border-slate-700 text-slate-300 hover:border-sky-300/50 hover:bg-slate-700 transition-colors"                      
                         >
                           <span className="m-1">{option}</span>
                         </div>
@@ -76,8 +76,7 @@ export default function Project() {
                     </div>
                   </div>
 
-                  <div className="mt-3 h-[2px] w-full rounded-2xl bg-sky-500/80"></div>
-                </div>
+<div className="mt-3 h-px w-2/3 rounded-full bg-gradient-to-r from-transparent via-sky-300/80 to-transparent"></div>                </div>
 
                 <p className="text-slate-300 leading-relaxed">{project.description}</p>
 
@@ -85,7 +84,7 @@ export default function Project() {
                   {project.skills.map((skill) => (
                     <span
                       key={`${project.id}-skill-${skill}`}
-                      className="bg-slate-800 border border-slate-700 text-slate-200 h-9 rounded-xl px-3 flex items-center justify-center text-xs md:text-sm hover:border-sky-500/50 hover:bg-slate-700 transition-colors"
+                      className="bg-slate-800 border border-slate-700 text-slate-200 h-9 rounded-xl px-3 flex items-center justify-center text-xs md:text-sm hover:border-sky-300/50 hover:bg-slate-700 transition-colors"
                     >
                       {skill}
                     </span>
