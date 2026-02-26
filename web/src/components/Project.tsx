@@ -24,14 +24,14 @@ export default function Project() {
     <div id="projects" className="bg-slate-950 py-20 px-4 md:px-10 border-t border-slate-800">
       <div className="w-full max-w-6xl mx-auto">
         <div className="flex flex-col items-center space-y-6 text-center">
-          <h1 className="text-slate-100">PROJECTS</h1>
+          <h1 className="text-3xl md:text-4xl tracking-tight">PROJECTS</h1>
           <div className="w-32 h-px rounded-full bg-gradient-to-r from-transparent via-sky-300/80 to-transparent"></div>
-          <p className="max-w-xl mt-2 text-slate-400 text-xl">
+          <p className="max-w-xl mt-2 text-slate-400 text-lg md:text-xl">
             Here you will find some of my personal projects and the skills learned from each one
           </p>
         </div>
 
-        <div className="flex flex-col space-y-16 mt-15 w-full max-w-6xl">
+        <div className="flex flex-col space-y-16 mt-12 w-full max-w-6xl">
           {projects.map((project) => (
             <motion.div
               key={project.id.toString()}

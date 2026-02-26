@@ -38,7 +38,7 @@ export default function Navbar() {
             spy={true}
             hashSpy={true}
             spyThrottle={50}
-            offset={-190}
+            offset={-90}
             activeClass="text-sky-300 after:w-full"
             className={navLinkClass}          
           >
@@ -80,7 +80,7 @@ export default function Navbar() {
       <div className="md:hidden">
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="p-2 text-slate-200 hover:text-sky-400 transition-colors duration-200 focus:outline-none"
+          className="p-2 text-slate-200 hover:text-sky-300 transition-colors duration-200 focus:outline-none"
           aria-label={isOpen ? "Close menu" : "Open menu"}
         >
           {isOpen ? <X size={28} /> : <Menu size={28} />}
@@ -95,7 +95,7 @@ export default function Navbar() {
             duration={500}
             spy={true}
             offset={-90}
-            activeClass="text-sky-400 after:w-full"
+            activeClass="text-sky-300 after:w-full"
             onClick={() => setIsOpen(false)}
             className={navLinkClass}
           >
@@ -107,7 +107,7 @@ export default function Navbar() {
             duration={500}
             spy={true}
             offset={-90}
-            activeClass="text-sky-400 after:w-full"
+            activeClass="text-sky-300 after:w-full"
             onClick={() => setIsOpen(false)}
             className={navLinkClass}
           >
@@ -119,7 +119,7 @@ export default function Navbar() {
             duration={500}
             spy={true}
             offset={-90}
-            activeClass="text-sky-400 after:w-full"
+            activeClass="text-sky-300 after:w-full"
             onClick={() => setIsOpen(false)}
             className={navLinkClass}
           >

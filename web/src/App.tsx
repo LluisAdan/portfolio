@@ -65,31 +65,35 @@ function App() {
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6 }}
             >
-              <h1>I'm Lluis Adan</h1>
+              <h1 className="text-3xl md:text-4xl tracking-tight text-slate-100">
+                I'm Lluis Adan
+              </h1>
               <div className="w-32 h-px rounded-full bg-gradient-to-r from-transparent via-sky-300/80 to-transparent"></div>
-              <p className="mt-2 text-center text-slate-400 text-xl">Want to know more about me?</p>
+              <p className="mt-2 text-center text-slate-400 text-lg md:text-xl">Want to know more about me?</p>
             </motion.div>
             
             <div className="flex flex-col md:flex-row justify-between gap-8 md:gap-10 mt-12 mx-auto max-w-6xl">
               <motion.div
-                className="w-full md:w-1/2 p-4 md:p-5"
+                className="w-full md:w-1/2 p-4 md:p-5 max-w-prose"
                 initial={{ opacity: 0, x: -40 }}
                 animate={isInView ? { opacity: 1, x: 0 } : {}}
                 transition={{ duration: 0.6 }}
               >
-                <h2 className="mb-4">From infrastructure to code</h2>
-                <p className="text-slate-300 leading-relaxed">
-                  I'm a Full Stack Developer with experience in JavaScript (ES6) and ReactJS, combined with a solid background as a systems technician.
-                </p>
-                <p className="text-slate-300 mt-4 leading-relaxed">
-                  Thanks to this background, I not only develop efficient applications, but I also understand the infrastructure that supports them, from servers to network configurations.
-                </p>
-                <p className="text-slate-300 mt-4 leading-relaxed">
-                  I am passionate about technology and the challenges it brings. I consider myself a resolute, proactive and constantly learning person, always exploring new tools and trends to improve my skills and provide innovative solutions.
-                </p>
+                <h2 className="mb-4 text-slate-100 tracking-tight">From infrastructure to code</h2>
+                <div className="space-y-4">
+                  <p className="text-slate-300 leading-relaxed">
+                    I'm a Full Stack Developer with experience in JavaScript (ES6) and ReactJS, combined with a solid background as a systems technician.
+                  </p>
+                  <p className="text-slate-300 leading-relaxed">
+                    Thanks to this background, I not only develop efficient applications, but I also understand the infrastructure that supports them, from servers to network configurations.
+                  </p>
+                  <p className="text-slate-300 leading-relaxed">
+                    I am passionate about technology and the challenges it brings. I consider myself a resolute, proactive and constantly learning person, always exploring new tools and trends to improve my skills and provide innovative solutions.
+                  </p>
+                </div>
               </motion.div>
               <div className="w-full md:w-1/2 p-4 md:p-5">
-                <h2 className="mb-4">My Skills</h2>
+                <h2 className="mb-4 text-slate-100 tracking-tight">My Skills</h2>
                 <div className="flex flex-wrap gap-2.5 select-none">
                 {["HTML", "CSS", "JavaScript", "React", "Node", "Express", "MongoDB", "Git", "Github", "Docker", "Tailwind CSS", "Bootstrap", "Responsive"].map((skill, index) => (
                   <motion.div
@@ -126,7 +130,7 @@ function App() {
               href="https://linkedin.com/in/lluis-adan"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-2 rounded-xl border border-slate-800 bg-slate-900 hover:border-sky-500/40 transition-colors duration-200"
+              className="p-2 rounded-xl border border-slate-800 bg-slate-900 hover:border-sky-300/40 transition-colors duration-200"
             >
               <img
                 className="w-8 md:w-10 opacity-90 hover:opacity-100 hover:scale-105 transition-all duration-200"
@@ -139,7 +143,7 @@ function App() {
               href="https://github.com/LluisAdan"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-2 rounded-xl border border-slate-800 bg-slate-900 hover:border-sky-500/40 transition-colors duration-200"
+              className="p-2 rounded-xl border border-slate-800 bg-slate-900 hover:border-sky-300/40 transition-colors duration-200"
             >
               <img
                 className="w-8 md:w-10 opacity-90 hover:opacity-100 hover:scale-105 transition-all duration-200"
