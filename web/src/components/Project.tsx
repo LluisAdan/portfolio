@@ -59,21 +59,29 @@ export default function Project() {
                 />
               </a>
 
-              <div className="md:w-1/2 p-5 flex flex-col space-y-4">
-                <div>
+              <div className="md:w-1/2 p-5 flex flex-col space-y-4 text-center md:text-left">
+                <div className="space-y-3 md:space-y-4">
                   <div className="flex flex-col md:flex-row md:justify-between md:items-center items-center text-center gap-2">
                     <h2 className="text-2xl font-semibold text-slate-100">{project.title}</h2>
-
                     <div className="flex flex-wrap gap-2 justify-center md:justify-end mt-2 md:mt-0 select-none">
                       {project.options.map((option) => (
                         <div
                           key={`${project.id}-option-${option}`}
-                          className="cursor-default h-9 rounded-xl px-3 flex items-center justify-center text-xs md:text-sm bg-slate-800 border border-slate-700 text-slate-300 hover:border-sky-300/50 hover:bg-slate-700 transition-colors"                      
-                        >
+                          className="cursor-default select-none h-7 rounded-lg px-3 flex items-center justify-center text-[11px] md:text-xs bg-slate-800/30 border border-slate-700/60 text-slate-400"                        >
                           <span className="m-1">{option}</span>
                         </div>
                       ))}
                     </div>
+                  </div>
+
+                  <div className="flex flex-wrap gap-1.5 select-none">
+                    {project.skills.map((skill) => (
+                      <span
+                        key={`${project.id}-skill-${skill}`}
+                        className="cursor-default select-none h-7 rounded-lg px-2.5 flex items-center justify-center text-[11px] md:text-xs bg-slate-800/40 border border-slate-700/60 text-slate-300"                      >
+                        {skill}
+                      </span>
+                    ))}
                   </div>
 
                   <div className="mt-3 h-px w-2/3 rounded-full bg-gradient-to-r from-transparent via-sky-300/80 to-transparent"></div>                
@@ -90,16 +98,6 @@ export default function Project() {
                     ))}
                   </ul>
                 ) : null}
-                <div className="flex flex-wrap gap-2 select-none">
-                  {project.skills.map((skill) => (
-                    <span
-                      key={`${project.id}-skill-${skill}`}
-                      className="bg-slate-800 border border-slate-700 text-slate-200 h-9 rounded-xl px-3 flex items-center justify-center text-xs md:text-sm hover:border-sky-300/50 hover:bg-slate-700 transition-colors"
-                    >
-                      {skill}
-                    </span>
-                  ))}
-                </div>
 
                 <div className="mt-4 flex flex-wrap justify-center md:justify-start gap-3">
                   <ButtonLink href={project.url} target="_blank" rel="noopener noreferrer" variant="primary">
