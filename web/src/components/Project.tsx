@@ -100,12 +100,12 @@ export default function Project() {
                 ) : null}
 
                 <div className="mt-4 flex flex-wrap justify-center md:justify-start gap-3">
-                  <ButtonLink href={project.url} target="_blank" rel="noopener noreferrer" variant="primary">
-                    VER PROYECTO
+                  <ButtonLink href={project.url} target="_blank" rel="noopener noreferrer" variant="primary" className="px-5">
+                    VER DEMO
                   </ButtonLink>
 
                   <ButtonLink href={project.git} target="_blank" rel="noopener noreferrer" variant="secondary">
-                    GITHUB
+                    CÓDIGO
                   </ButtonLink>
                 </div>
               </div>

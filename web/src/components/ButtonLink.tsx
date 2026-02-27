@@ -11,9 +11,9 @@ const base =
 
 const variants: Record<Variant, string> = {
   primary:
-    "border border-sky-300/30 bg-slate-900 text-slate-100 hover:bg-sky-300/10 hover:border-sky-300/50 hover:text-white",
+    "border border-sky-300/40 bg-slate-900/70 text-slate-100 shadow-lg shadow-sky-300/10 hover:bg-sky-300/10 hover:border-sky-300/60 hover:text-white",
   secondary:
-    "border border-slate-700 bg-slate-800 text-slate-200 hover:border-sky-300/40 hover:text-sky-300",
+    "border border-slate-700/80 bg-transparent text-slate-300 hover:border-sky-300/40 hover:text-sky-300",
 }
 
 export default function ButtonLink({
