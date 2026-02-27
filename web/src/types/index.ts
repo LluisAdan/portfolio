@@ -9,4 +9,5 @@ export type Project = {
   url: string;
   git: string;
   skills: [string];
+  highlights?: [string];
 }
