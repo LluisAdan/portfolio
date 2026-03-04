@@ -75,10 +75,10 @@ function App() {
               transition={{ duration: 0.6 }}
             >
               <h1 className="text-3xl md:text-4xl tracking-tight text-slate-100">
-                Soy Lluís Adán
+                SOBRE MÍ
               </h1>
               <div className="w-32 h-px rounded-full bg-gradient-to-r from-transparent via-sky-300/80 to-transparent"></div>
-              <p className="mt-2 text-center text-slate-400 text-lg md:text-xl">¿Quieres saber más sobre mí?</p>
+              <p className="mt-2 text-center text-slate-400 text-lg md:text-xl">De sistemas a desarrollo full stack</p>
             </motion.div>
             
             <div className="flex flex-col md:flex-row justify-between gap-8 md:gap-10 mt-12 mx-auto max-w-6xl">
@@ -88,7 +88,7 @@ function App() {
                 animate={isInView ? { opacity: 1, x: 0 } : {}}
                 transition={{ duration: 0.6 }}
               >
-                <h2 className="mb-4 text-slate-100 tracking-tight">De sistemas a desarrollo</h2>
+                <h2 className="mb-4 text-slate-100 tracking-tight">Perfil técnico</h2>
                 
                 <p className="text-slate-300 leading-relaxed">
                   Vengo de sistemas e infraestructura y he dado el salto a desarrollo web. Me gusta construir aplicaciones mantenibles, con buen UX y backend sólido: APIs, autenticación, datos y despliegue.                  

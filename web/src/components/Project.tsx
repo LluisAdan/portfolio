@@ -35,29 +35,35 @@ export default function Project() {
           {[...projects].reverse().map((project) => (
             <motion.div
               key={project.id.toString()}
-              className="flex flex-col md:flex-row w-full space-x-0 md:space-x-4 mb-6 rounded-2xl p-4 md:p-5 bg-slate-900 border border-slate-800 shadow-xl shadow-black/20 hover:border-slate-700 hover:bg-slate-900/80 transition-colors duration-300"
+              className="flex flex-col md:flex-row md:items-center w-full space-x-0 md:space-x-4 mb-6 rounded-2xl p-4 md:p-5 bg-slate-900 border border-slate-800 shadow-xl shadow-black/20 hover:border-slate-700 hover:bg-slate-900/80 transition-colors duration-300"
               initial={{ opacity: 0, scale: 0.95, y: 40 }}
               whileInView={{ opacity: 1, scale: 1, y: 0 }}
               viewport={{ once: true, amount: 0.3 }}
               transition={{ duration: 0.6, ease: "easeOut" }}
             >
-              <a
-                href={project.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="md:w-1/2 flex justify-center"
-              >
-                <motion.img
-                  src={project.image}
-                  alt={project.title}
-                  className="border border-slate-700 rounded-xl w-full max-w-2xl object-cover shadow-2xl shadow-black/30"
-                  initial={{ opacity: 0, scale: 0.95, y: 30 }}
-                  whileInView={{ opacity: 1, scale: 1, y: 0 }}
-                  viewport={{ once: true, amount: 0.3 }}
-                  transition={{ duration: 0.6, ease: "easeOut" }}
-                  whileHover={{ scale: 1.03, y: -5 }}
-                />
-              </a>
+              <div className="md:w-1/2 self-start md:self-auto">
+                <a
+                  href={project.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block"
+                >
+                  <div className="rounded-3xl p-[1px] bg-gradient-to-b from-slate-700/60 via-slate-800/30 to-transparent">
+                    <div className="rounded-3xl bg-slate-950/60 shadow-xl shadow-black/30 overflow-hidden ring-1 ring-slate-800/60">
+                      <motion.img
+                        src={project.image}
+                        alt={project.title}
+                        className="w-full aspect-[16/10] object-cover"
+                        initial={{ opacity: 0, scale: 0.95, y: 30 }}
+                        whileInView={{ opacity: 1, scale: 1, y: 0 }}
+                        viewport={{ once: true, amount: 0.3 }}
+                        transition={{ duration: 0.6, ease: "easeOut" }}
+                        whileHover={{ scale: 1.02 }}
+                      />
+                    </div>
+                  </div>
+                </a>
+              </div>
 
               <div className="md:w-1/2 p-5 flex flex-col space-y-4 text-center md:text-left">
                 <div className="space-y-3 md:space-y-4">
