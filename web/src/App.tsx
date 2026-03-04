@@ -97,13 +97,13 @@ function App() {
                 animate={isInView ? { opacity: 1, x: 0 } : {}}
                 transition={{ duration: 0.6 }}
               >
-              <div className="flex items-start gap-6">
+              <div className="flex items-center gap-6">
                 <div className="shrink-0">
                   <div className="rounded-3xl p-[1px] bg-gradient-to-b from-slate-700/60 via-slate-800/30 to-transparent">
                     <img
                       src={LluisPhoto}
                       alt="Lluís Adán"
-                      className="h-28 w-28 md:h-32 md:w-32 rounded-3xl object-cover bg-slate-950/60 ring-1 ring-slate-800/60 shadow-xl shadow-black/30"
+                      className="h-28 w-28 md:h-36 md:w-36 rounded-3xl object-cover bg-slate-950/60 ring-1 ring-slate-800/60 shadow-xl shadow-black/30"
                     />
                   </div>
                 </div>
@@ -144,7 +144,7 @@ function App() {
               <div className="w-full md:w-1/2 p-4 md:p-5">
                 <h2 className="mb-4 text-slate-100 tracking-tight">Tecnologías</h2>
                 <div className="flex flex-wrap gap-2.5 select-none">
-                {["JavaScript", "React", "Node", "HTML", "CSS", "Express", "MongoDB", "Git", "Github", "Docker", "Tailwind CSS", "Bootstrap", "Responsive"].map((skill, index) => (
+                {["TypeScript","React","Node","Express","Supabase","MongoDB","Docker","Tailwind CSS","Git","GitHub","HTML","CSS"].map((skill, index) => (
                   <motion.div
                     key={skill}
                     initial={{ opacity: 0, y: 20 }}
