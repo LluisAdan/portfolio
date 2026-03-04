@@ -122,7 +122,8 @@ function App() {
                   <li className="flex gap-3">
                     <span className="mt-2 h-1.5 w-1.5 rounded-full bg-sky-300/80 shrink-0"></span>
                     <span>
-                      <strong className="text-slate-100 font-semibold">Frontend:</strong> React + TypeScript, componentes, formularios y responsive.
+                      <strong className="text-slate-100 font-semibold">Frontend:</strong>{" "}
+                      React, componentes, formularios y responsive. TypeScript aplicado en este portfolio y próximo stack principal.                    
                     </span>
                   </li>
 
