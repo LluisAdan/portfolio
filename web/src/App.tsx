@@ -6,6 +6,7 @@ import GithubPhoto from './assets/logos/github.png'
 import { Link } from 'react-scroll'
 import { motion, useInView } from "framer-motion"
 import { useRef } from "react"
+import LluisPhoto from '/src/assets/profile/Lluís_perfil.jpg'
 
 
 function App() {
@@ -21,18 +22,31 @@ function App() {
     <Navbar />
 
     <main className="pt-18">
-      <div
-        className="relative bg-cover bg-center p-10 md:p-20 lg:p-40 text-center flex flex-col items-center overflow-hidden"
-        style={{ backgroundImage: "url('/img/Fondo_porfolio.jpg')" }}
-      >
-        <div className="absolute inset-0 bg-gradient-to-b from-slate-950/60 via-slate-950/80 to-slate-950"></div>
+      <div className="relative p-10 md:p-20 lg:p-40 text-center flex flex-col items-center overflow-hidden">
+        {/* Base más clara (recupera contraste) */}
+        <div className="absolute inset-0 bg-gradient-to-b from-slate-900 via-slate-950 to-slate-950" />
 
+        {/* Brillos blancos (highlights) */}
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_15%,rgba(255,255,255,0.14),transparent_45%),radial-gradient(circle_at_20%_30%,rgba(255,255,255,0.08),transparent_40%),radial-gradient(circle_at_80%_30%,rgba(255,255,255,0.08),transparent_40%)]" />
+
+        {/* Aurora azul (más agresiva) */}
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(125,211,252,0.30),transparent_55%),radial-gradient(ellipse_at_bottom,rgba(56,189,248,0.18),transparent_60%)]" />
+
+        {/* Grid visible + máscara túnel */}
+        <div className="absolute inset-0 opacity-[0.30] [background-image:linear-gradient(to_right,rgba(148,163,184,0.32)_1px,transparent_1px),linear-gradient(to_bottom,rgba(148,163,184,0.32)_1px,transparent_1px)] [background-size:64px_64px] [mask-image:radial-gradient(ellipse_at_center,black_42%,transparent_74%)]" />
+
+        {/* Túnel (conic) */}
+        <div className="absolute inset-0 opacity-60 bg-[conic-gradient(from_180deg_at_50%_50%,rgba(125,211,252,0.28),rgba(2,6,23,0.0),rgba(255,255,255,0.10),rgba(125,211,252,0.18))] [mask-image:radial-gradient(circle_at_center,black_38%,transparent_72%)]" />
+
+        {/* Viñeta final (menos oscura que antes, para que se vea) */}
+        <div className="absolute inset-0 bg-gradient-to-b from-slate-950/20 via-slate-950/55 to-slate-950" />
+          
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3, duration: 1 }}
             className="relative z-10 text-3xl md:text-4xl lg:text-5xl font-bold text-slate-100 max-w-4xl leading-tight tracking-tight"
-          > 
+          >
             Desarrollador Full Stack
           </motion.h1>
 
@@ -41,7 +55,7 @@ function App() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.45, duration: 0.9 }}
             className="relative z-10 mt-5 max-w-3xl text-lg md:text-xl text-slate-300 leading-relaxed"
-            >
+          >
             Construyo aplicaciones web completas con React y Node. APIs REST, autenticación, base de datos y despliegue.
           </motion.p>
 
@@ -51,13 +65,8 @@ function App() {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.8, duration: 0.5 }}
           >
-            <Link
-              to="projects"
-              smooth={true}
-              duration={500}
-              className={btnPrimary}
-            >
-            VER PROYECTOS
+            <Link to="projects" smooth duration={500} className={btnPrimary}>
+              VER PROYECTOS
             </Link>
           </motion.div>
         </div>
@@ -88,11 +97,26 @@ function App() {
                 animate={isInView ? { opacity: 1, x: 0 } : {}}
                 transition={{ duration: 0.6 }}
               >
-                <h2 className="mb-4 text-slate-100 tracking-tight">Perfil técnico</h2>
-                
-                <p className="text-slate-300 leading-relaxed">
-                  Vengo de sistemas e infraestructura y he dado el salto a desarrollo web. Me gusta construir aplicaciones mantenibles, con buen UX y backend sólido: APIs, autenticación, datos y despliegue.                  
-                </p>
+              <div className="flex items-start gap-6">
+                <div className="shrink-0">
+                  <div className="rounded-3xl p-[1px] bg-gradient-to-b from-slate-700/60 via-slate-800/30 to-transparent">
+                    <img
+                      src={LluisPhoto}
+                      alt="Lluís Adán"
+                      className="h-28 w-28 md:h-32 md:w-32 rounded-3xl object-cover bg-slate-950/60 ring-1 ring-slate-800/60 shadow-xl shadow-black/30"
+                    />
+                  </div>
+                </div>
+
+                <div>
+                  <h2 className="mb-3 text-slate-100 tracking-tight">Perfil técnico</h2>
+
+                  <p className="text-slate-300 leading-relaxed">
+                    Vengo de sistemas e infraestructura y he dado el salto a desarrollo web. Me gusta construir aplicaciones mantenibles,
+                    con buen UX y backend sólido: APIs, autenticación, datos y despliegue.
+                  </p>
+                </div>
+              </div>
 
                 <ul className="mt-6 space-y-3 text-slate-300">
                   <li className="flex gap-3">
@@ -120,7 +144,7 @@ function App() {
               <div className="w-full md:w-1/2 p-4 md:p-5">
                 <h2 className="mb-4 text-slate-100 tracking-tight">Tecnologías</h2>
                 <div className="flex flex-wrap gap-2.5 select-none">
-                {["HTML", "CSS", "JavaScript", "React", "Node", "Express", "MongoDB", "Git", "Github", "Docker", "Tailwind CSS", "Bootstrap", "Responsive"].map((skill, index) => (
+                {["JavaScript", "React", "Node", "HTML", "CSS", "Express", "MongoDB", "Git", "Github", "Docker", "Tailwind CSS", "Bootstrap", "Responsive"].map((skill, index) => (
                   <motion.div
                     key={skill}
                     initial={{ opacity: 0, y: 20 }}
