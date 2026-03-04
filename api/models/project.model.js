@@ -26,6 +26,9 @@ const projectSchema = new Schema(
     },
     skills: {
       type: [String]
+    },
+    highlights: {
+      type: [String]
     }
   },
   {

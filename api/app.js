@@ -19,6 +19,16 @@ app.use(cors);
 const router = require('./configs/routes.config');
 app.use('/api/v1', router);
 
+const path = require("path")
+
+// Serve Vite build
+app.use(express.static(path.join(__dirname, "..", "web", "dist")))
+
+// SPA fallback
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "..", "web", "dist", "index.html"))
+})
+
 // Error handlers
 
 app.use((req, res, next) => {
@@ -31,5 +41,7 @@ app.use((err, req, res, next) => {
   res.status(500).json({ message: "Internal Server Error"});
 });
 
-const port = process.env.PORT || 3000;
-app.listen(port, () => console.info(`Application running at port ${port}`));
+const PORT = process.env.PORT || 3000
+app.listen(PORT, "0.0.0.0", () => {
+  console.log(`Server running on port ${PORT}`)
+});
