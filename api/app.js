@@ -2,7 +2,7 @@ require('dotenv').config();
 
 const express = require('express');
 const logger = require('morgan');
-const cors = require('./middlewares/cors.middleware');
+const cors = require('cors');
 
 require('./configs/db.config');
 
