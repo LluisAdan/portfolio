@@ -1,5 +1,6 @@
 import { useState } from "react"
 import Button from "./Button"
+import { API_BASE_URL } from "../services/api.service"
 
 type FormData = {
   name: string
@@ -24,7 +25,7 @@ export default function ContactForm() {
     e.preventDefault()
 
     try {
-      const response = await fetch("http://localhost:3000/api/v1/send", {
+      const response = await fetch(`${API_BASE_URL}/send`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
@@ -52,7 +53,7 @@ export default function ContactForm() {
   <p className="text-sm md:text-base">
     O escríbeme directamente a{" "}
     <a
-      href="mailto:TU_EMAIL_AQUI"
+      href="mailto:lluis.adan@gmail.com"
       className="text-sky-300 hover:text-sky-200 underline underline-offset-4 transition-colors"
     >
       lluis.adan@gmail.com
@@ -110,7 +111,7 @@ export default function ContactForm() {
           </div>
 
           <div className="w-full flex justify-end">
-            <Button type="submit">ENVIAR</Button>
+            <Button variant="secondary" type="submit">ENVIAR</Button>
           </div>
         </form>
 
