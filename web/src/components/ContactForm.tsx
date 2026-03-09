@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import Button from "./Button"
 import { API_BASE_URL } from "../services/api.service"
 
@@ -16,6 +16,12 @@ export default function ContactForm() {
   })
 
   const [status, setStatus] = useState<string | null>(null)
+
+  useEffect(() => {
+    if (!status) return
+    const t = setTimeout(() => setStatus(null), 4000)
+    return () => clearTimeout(t)
+  }, [status])
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value })
@@ -48,20 +54,8 @@ export default function ContactForm() {
         <div className="flex flex-col items-center space-y-6 text-center">
           <h1 className="text-3xl md:text-4xl tracking-tight">CONTACTO</h1>
           <div className="w-32 h-px rounded-full bg-gradient-to-r from-transparent via-sky-300/60 to-transparent"></div>
-          <p className="mt-2 text-slate-400 text-lg md:text-xl">Si quieres, puedes escribirme</p>
-        <div className="mt-4 text-center text-slate-300">
-  <p className="text-sm md:text-base">
-    O escríbeme directamente a{" "}
-    <a
-      href="mailto:lluis.adan@gmail.com"
-      className="text-sky-300 hover:text-sky-200 underline underline-offset-4 transition-colors"
-    >
-      lluis.adan@gmail.com
-    </a>
-  </p>
-</div>
+          <p className="mt-2 text-slate-400 text-lg md:text-xl">¿Hablamos?</p>
         </div>
-
         <form
           onSubmit={handleSubmit}
           className="bg-slate-950 mt-10 w-full max-w-lg border border-slate-800 p-6 sm:p-10 space-y-6 rounded-2xl shadow-xl shadow-black/20"
@@ -115,11 +109,26 @@ export default function ContactForm() {
           </div>
         </form>
 
-        {status && (
-          <p className="mt-4 text-center text-slate-300 text-sm">{status}</p>
-        )}
+        <div className="mt-4 min-h-[20px] text-center text-sm">
+          {status ? (
+            <p className="text-slate-300">{status}</p>
+          ) : (
+            <span className="invisible">placeholder</span>
+          )}
+        </div>
       </div>
-      <div aria-hidden="true" className="h-40"></div>
+      <div aria-hidden="true" className="h-16"></div>
+      <div className="text-center text-slate-300">
+        <p className="text-sm md:text-base">
+          O escríbeme directamente a{" "}
+          <a
+            href="mailto:lluis.adan@gmail.com"
+            className="text-sky-300 hover:text-sky-200 underline underline-offset-4 transition-colors"
+          >
+            lluis.adan@gmail.com
+          </a>
+        </p>
+      </div>
     </div>
   )
 }

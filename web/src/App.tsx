@@ -151,7 +151,7 @@ function App() {
                     initial={{ opacity: 0, y: 20 }}
                     animate={isInView ? { opacity: 1, y: 0 } : {}}
                     transition={{ delay: index * 0.10 }}
-                    className="cursor-default bg-slate-800 border border-slate-700 text-slate-200 h-10 rounded-xl px-4 flex items-center justify-center text-sm hover:border-sky-300/50 hover:bg-slate-700 transition-colors"
+                    className="cursor-default bg-slate-800 border border-slate-700 text-slate-200 h-10 rounded-xl px-4 flex items-center justify-center text-sm"
                   >
                     {skill}
                   </motion.div>

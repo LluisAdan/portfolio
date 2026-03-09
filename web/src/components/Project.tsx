@@ -119,12 +119,6 @@ export default function Project() {
           ))}
         </div>
       </div>
-      <div className="mt-14 text-center text-slate-400">
-        <p>
-          ¿Quieres que hablemos?{" "}
-          <span className="text-sky-300">Escríbeme en la sección de contacto.</span>
-        </p>
-      </div>
     </div>
   )
 }
