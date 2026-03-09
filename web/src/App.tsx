@@ -33,7 +33,7 @@ function App() {
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(125,211,252,0.30),transparent_55%),radial-gradient(ellipse_at_bottom,rgba(56,189,248,0.18),transparent_60%)]" />
 
         {/* Grid visible + máscara túnel */}
-        <div className="absolute inset-0 opacity-[0.30] [background-image:linear-gradient(to_right,rgba(148,163,184,0.32)_1px,transparent_1px),linear-gradient(to_bottom,rgba(148,163,184,0.32)_1px,transparent_1px)] [background-size:64px_64px] [mask-image:radial-gradient(ellipse_at_center,black_42%,transparent_74%)]" />
+        <div className="absolute inset-0 opacity-[0.55] [background-image:linear-gradient(to_right,rgba(148,163,184,0.32)_1px,transparent_1px),linear-gradient(to_bottom,rgba(148,163,184,0.32)_1px,transparent_1px)] [background-size:48px_48px] [mask-image:radial-gradient(ellipse_at_center,black_42%,transparent_74%)]" />
 
         {/* Túnel (conic) */}
         <div className="absolute inset-0 opacity-60 bg-[conic-gradient(from_180deg_at_50%_50%,rgba(125,211,252,0.28),rgba(2,6,23,0.0),rgba(255,255,255,0.10),rgba(125,211,252,0.18))] [mask-image:radial-gradient(circle_at_center,black_38%,transparent_72%)]" />
