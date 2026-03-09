@@ -7,7 +7,7 @@ type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> & {
 }
 
 const base =
-  "select-none inline-flex items-center justify-center rounded-xl px-4 py-2 text-sm font-semibold transition-all duration-200"
+  "select-none inline-flex items-center justify-center rounded-xl px-4 py-2 text-sm font-semibold transition-all duration-200 cursor-pointer active:scale-[0.98] focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-300/60 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950 disabled:cursor-not-allowed disabled:opacity-60"
 
 const variants: Record<Variant, string> = {
   primary:

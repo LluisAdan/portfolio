@@ -16,6 +16,7 @@ export default function ContactForm() {
   })
 
   const [status, setStatus] = useState<string | null>(null)
+  const [isSubmitting, setIsSubmitting] = useState(false)
 
   useEffect(() => {
     if (!status) return
@@ -29,6 +30,10 @@ export default function ContactForm() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
+    if (isSubmitting) return
+
+    setIsSubmitting(true)
+    setStatus(null)
 
     try {
       const response = await fetch(`${API_BASE_URL}/send`, {
@@ -38,10 +43,13 @@ export default function ContactForm() {
       })
 
       if (!response.ok) throw new Error("Request failed")
+
       setStatus("Mensaje enviado ✅")
       setFormData({ name: "", email: "", message: "" })
     } catch (error) {
-      setStatus("No se pudo enviar. Prueba de nuevo o escríbeme a lluis.adan@gmail.com")
+      setStatus("No se pudo enviar. Prueba de nuevo o escríbeme por email.")
+    } finally {
+      setIsSubmitting(false)
     }
   }
 
@@ -104,30 +112,28 @@ export default function ContactForm() {
             ></textarea>
           </div>
 
-          <div className="w-full flex justify-end">
-            <Button variant="secondary" type="submit">ENVIAR</Button>
+          <div className="w-full flex items-center justify-between gap-4">
+            <div className="min-h-[20px] text-sm text-slate-300">
+              {status ? <span>{status}</span> : <span className="invisible">placeholder</span>}
+            </div>
+
+            <Button variant="secondary" type="submit" disabled={isSubmitting}>
+              {isSubmitting ? "ENVIANDO…" : "ENVIAR"}
+            </Button>
           </div>
         </form>
-
-        <div className="mt-4 min-h-[20px] text-center text-sm">
-          {status ? (
-            <p className="text-slate-300">{status}</p>
-          ) : (
-            <span className="invisible">placeholder</span>
-          )}
+        
+        <div className="mt-10 text-center text-slate-300">
+          <p className="text-sm md:text-base">
+            O escríbeme directamente a{" "}
+            <a
+              href="mailto:lluis.adan@gmail.com"
+              className="text-sky-300 hover:text-sky-200 underline underline-offset-4 transition-colors"
+            >
+              lluis.adan@gmail.com
+            </a>
+          </p>
         </div>
-      </div>
-      <div aria-hidden="true" className="h-16"></div>
-      <div className="text-center text-slate-300">
-        <p className="text-sm md:text-base">
-          O escríbeme directamente a{" "}
-          <a
-            href="mailto:lluis.adan@gmail.com"
-            className="text-sky-300 hover:text-sky-200 underline underline-offset-4 transition-colors"
-          >
-            lluis.adan@gmail.com
-          </a>
-        </p>
       </div>
     </div>
   )
