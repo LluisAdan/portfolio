@@ -12,7 +12,18 @@ require("./configs/db.config")
 const app = express()
 
 // Security & parsers
-app.use(helmet())
+app.use(
+  helmet({
+    crossOriginResourcePolicy: { policy: "cross-origin" },
+    contentSecurityPolicy: {
+      useDefaults: true,
+      directives: {
+        "img-src": ["'self'", "data:", "https://res.cloudinary.com"],
+      },
+    },
+  })
+)
+
 app.use(express.json({ limit: "10kb" }))
 app.use(logger("dev"))
 
