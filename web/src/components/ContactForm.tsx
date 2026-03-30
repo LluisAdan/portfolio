@@ -6,6 +6,8 @@ type FormData = {
   name: string
   email: string
   message: string
+  honeypot: string
+  ts: number
 }
 
 export default function ContactForm() {
@@ -13,6 +15,8 @@ export default function ContactForm() {
     name: "",
     email: "",
     message: "",
+    honeypot: "",
+    ts: Date.now(),
   })
 
   const [status, setStatus] = useState<string | null>(null)
@@ -45,7 +49,7 @@ export default function ContactForm() {
       if (!response.ok) throw new Error("Request failed")
 
       setStatus("Mensaje enviado ✅")
-      setFormData({ name: "", email: "", message: "" })
+      setFormData({ name: "", email: "", message: "", honeypot: "", ts: Date.now() })
     } catch (error) {
       setStatus("No se pudo enviar. Prueba de nuevo o escríbeme por email.")
     } finally {
@@ -68,6 +72,15 @@ export default function ContactForm() {
           onSubmit={handleSubmit}
           className="bg-slate-950 mt-10 w-full max-w-lg border border-slate-800 p-6 sm:p-10 space-y-6 rounded-2xl shadow-xl shadow-black/20"
         >
+          <input
+            type="text"
+            name="honeypot"
+            value={formData.honeypot}
+            onChange={handleChange}
+            className="hidden"
+            tabIndex={-1}
+            autoComplete="off"
+          />
           <div className="w-full space-y-2">
             <label htmlFor="name" className="block font-medium text-slate-200">
               Nombre
